@@ -42,7 +42,9 @@ Contains the regular expression of the valid email address according
 
 ### `Dictionary`
 
-* `Dictionary<TKey, TValue> SetPairIfValueNotIsNull<TKey, TValue>`
+* `Dictionary<TKey, TValue> SetPair(TKey key, TValue value)`
+* `Dictionary<TKey, TValue> SetPairs(Dictionary<TKey, TValue> pairs)
+* `Dictionary<TKey, TValue> SetPairIfValueIsNotNull(TKey key, TValue? value)`
 * `SetPairIf`
   * `Dictionary<TKey, TValue> SetPairIf<TKey, TValue>(TKey key, TValue value, bool condition) where TKey : notnull`
   * `Dictionary<TKey, TValue> SetPairIf<TKey, TValue>(TKey key, TValue value, Func<TKey, TValue, bool> condition) where TKey : notnull`
@@ -74,6 +76,11 @@ Contains the regular expression of the valid email address according
 * `string ToUpperCamelCase()`
 * `string ToLowerCamelCase()`
 * `string RemoveAllSpecifiedCharacters(char[] charactersToRemove)`
+
+
+### `System.Text.Json.Nodes.JsonObject`
+
+* `void SetProperty(this JsonObject targetObject, string dotSeparatedPath, object value)`
 
 
 ## Random values generators (`RandomValuesGenerator` class)

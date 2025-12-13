@@ -1,19 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>YamatoDaiwaCS_Extensions.Localizations.Japanese</PackageId>
-    <Title>Yamato Daiwa CS(harp) Extensions - Japanese localization</Title>
+    <PackageId>YamatoDaiwa.CSharpExtensions.Localizations.Japanese</PackageId>
+    <Title>Yamato Daiwa CSharp Extensions - Japanese Localization</Title>
     <Description>The Japanese localization for "Yamato Daiwa CS(harp) Extensions" library.</Description>
-    <Version>0.1.0</Version>
-    <RootNamespace>YamatoDaiwa.CSharpExtensions.OfficialLocalizations.Japanese</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Version>0.4.0</Version>
+    <RootNamespace>YamatoDaiwa.CSharpExtensions.Localizations.Japanese</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/TokugawaTakeshi/Yamato-Daiwa-CS-Extensions.git</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
-    <LangVersion>13</LangVersion>
+    <LangVersion>14</LangVersion>
+    <TargetFrameworks>net9.0;net10.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>

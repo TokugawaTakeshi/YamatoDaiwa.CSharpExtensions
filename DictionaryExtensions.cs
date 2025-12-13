@@ -4,56 +4,69 @@
 public static class Dictionary
 {
   
-  /* ━━━ SetPairIfValueNotIsNull ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  public static Dictionary<TKey, TValue> SetPairIfValueNotIsNull<TKey, TValue>(
-    this Dictionary<TKey, TValue> self,
-    TKey key,
-    TValue? value
-  ) where TKey : notnull
+  extension<TKey, TValue>(Dictionary<TKey, TValue> self) where TKey : notnull
   {
     
-    if (value is not null)
+    /* ━━━ SetPair ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    public Dictionary<TKey, TValue> SetPair(TKey key, TValue value)
     {
-      self[key] = value;
+      self.Add(key, value);
+      return self;
     }
     
-    return self;
     
-  }
-  
-  
-  /* ━━━ SetPairIf ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-  public static Dictionary<TKey, TValue> SetPairIf<TKey, TValue>(
-    this Dictionary<TKey, TValue> self,
-    TKey key,
-    TValue value,
-    bool condition
-  ) where TKey : notnull
-  {
-
-    if (condition)
+    /* ━━━ SetPairs ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    public Dictionary<TKey, TValue> SetPairs(Dictionary<TKey, TValue> pairs)
     {
-      self[key] = value;
+      
+      foreach ((TKey key, TValue value) in pairs)
+      {
+        self.Add(key, value);
+      }
+      
+      return self;
+      
+    }
+    
+    
+    /* ━━━ SetPairIfValueNotIsNull ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    public Dictionary<TKey, TValue> SetPairIfValueIsNotNull(TKey key, TValue? value)
+    {
+    
+      if (value is not null)
+      {
+        self[key] = value;
+      }
+    
+      return self;
+    
     }
 
-    return self;
-
-  }
-  
-  public static Dictionary<TKey, TValue> SetPairIf<TKey, TValue>(
-    this Dictionary<TKey, TValue> self,
-    TKey key,
-    TValue value,
-    Func<TKey, TValue, bool> condition
-  ) where TKey : notnull
-  {
-
-    if (condition(key, value))
+    
+    /* ━━━ SetPairIf ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    public Dictionary<TKey, TValue> SetPairIf(TKey key, TValue value, bool condition)
     {
-      self[key] = value;
+
+      if (condition)
+      {
+        self[key] = value;
+      }
+
+      return self;
+
     }
 
-    return self;
+    public Dictionary<TKey, TValue> SetPairIf(TKey key, TValue value, Func<TKey, TValue, bool> condition)
+    {
+
+      if (condition(key, value))
+      {
+        self[key] = value;
+      }
+
+      return self;
+
+    }
 
   }
   

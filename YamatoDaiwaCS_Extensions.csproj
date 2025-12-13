@@ -1,19 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Title>Yamato Daiwa CS(harp) Extensions</Title>
+    <PackageId>YamatoDaiwa.CSharpExtensions</PackageId>
+    <Title>Yamato Daiwa CSharp Extensions</Title>
     <Description>General utilities like additional "String" or "DateOnly" methods which are missing in standard classes.</Description>
-    <Version>0.1.0</Version>
+    <Version>0.4.0</Version>
     <RootNamespace>YamatoDaiwa.CSharpExtensions</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/TokugawaTakeshi/Yamato-Daiwa-CS-Extensions.git</RepositoryUrl>
     <PackageIcon>NuGetProjectIcon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
-    <LangVersion>13</LangVersion>
+    <LangVersion>14</LangVersion>
+    <TargetFrameworks>net9.0;net10.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   
   <ItemGroup>
@@ -23,6 +24,7 @@
     <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="DictionaryExtensions.cs" />
     <Compile Include="EmailAddress.cs" />
+    <Compile Include="JsonObjectExtensions.cs" />
     <Compile Include="ListExtensions.cs" />
     <Compile Include="NumberExtensions.cs" />
     <Compile Include="RandomValuesGenerator.cs" />
@@ -32,6 +34,7 @@
     <Compile Include="Exceptions\DataRetrievingFailedException.cs" />
     <Compile Include="Exceptions\DataSubmittingFailedException.cs" />
     <Compile Include="StringExtensions.cs" />
+    <Compile Include="ContentExtensions.cs" />
     <EmbeddedResource Remove="%2a%2a\**" />
     <None Remove="%2a%2a\**" />
   </ItemGroup>
