@@ -85,7 +85,8 @@ Contains the regular expression of the valid email address according
 
 ### `System.Text.Json.Nodes.JsonObject`
 
-* `void SetProperty(this JsonObject targetObject, string dotSeparatedPath, object value)`
+* `JsonObject SetProperty(string dotSeparatedPath, object value)`
+* `JsonObject SetProperties(Dictionary<string, object> dotSeparatedPathsAndValues)`
 
 
 ## Random values generators (`RandomValuesGenerator` class)
