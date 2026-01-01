@@ -4,7 +4,7 @@
     <PackageId>YamatoDaiwa.CSharpExtensions.Localizations.Russian</PackageId>
     <Title>Yamato Daiwa CSharp Extensions - Russian Localization</Title>
     <Description>The Russian localization for "Yamato Daiwa CS(harp) Extensions" library.</Description>
-    <Version>0.4.0</Version>
+    <Version>0.5.0</Version>
     <RootNamespace>YamatoDaiwa.CSharpExtensions.Localizations.Russian</RootNamespace>
     
 <!--    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>-->

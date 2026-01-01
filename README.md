@@ -40,6 +40,11 @@ Contains the regular expression of the valid email address according
 * `TElement[] LogEachElement<TElement>(Action<TElement>? logger = null)`
 
 
+### `Content`
+
++ `System.Threading.Tasks.Task<ResponseData> ReadExpectedToBeNonEmptyFromJsonAsync<ResponseData>(this System.Net.Http.HttpContent self)`
+
+
 ### `Dictionary`
 
 * `Dictionary<TKey, TValue> SetPair(TKey key, TValue value)`
@@ -138,6 +143,15 @@ The decision will depend mainly on specified nullable property decision strategy
 |---------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | `DataRetrievingFailedException` | Intended to be used when the data retrieving from some external resource (server, database, file, etc.) failed. |
 | `DataSubmittingFailedException` | Intended to be used when the data submitting to any external resource (server, database, etc.) failed.          |
+
+#### `DataRetrievingFailedException`
+
+* Constructor
+  * `DataRetrievingFailedException(string message)`
+  * `DataRetrievingFailedException(string message, Exception innerException)`
+  * `DataRetrievingFailedException(string messageSpecificPart, HttpResponseMessage response, object? responseData)`
+* Public static Methods
+  * `async Task<object?> TryToExtractResponseDataForLogging(HttpResponseMessage response)`
 
 
 ### `MockGatewayHelper` class
