@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.7.34024.191
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamatoDaiwaCS_Extensions", "YamatoDaiwaCS_Extensions.csproj", "{94D65D8E-645F-4B24-A7CD-FC39581C9FA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamatoDaiwa.CSharpExtensions", "YamatoDaiwa.CSharpExtensions.csproj", "{94D65D8E-645F-4B24-A7CD-FC39581C9FA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Japanese", "OfficialLocalizations\Japanese\Japanese.csproj", "{3B04A278-FE83-41AB-8592-609C34F8527D}"
 	ProjectSection(ProjectDependencies) = postProject

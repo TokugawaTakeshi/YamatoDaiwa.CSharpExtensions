@@ -4,7 +4,7 @@
     <PackageId>YamatoDaiwa.CSharpExtensions.Localizations.Japanese</PackageId>
     <Title>Yamato Daiwa CSharp Extensions - Japanese Localization</Title>
     <Description>The Japanese localization for "Yamato Daiwa CS(harp) Extensions" library.</Description>
-    <Version>0.6.0</Version>
+    <Version>0.7.0</Version>
     <RootNamespace>YamatoDaiwa.CSharpExtensions.Localizations.Japanese</RootNamespace>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/TokugawaTakeshi/Yamato-Daiwa-CS-Extensions.git</RepositoryUrl>
@@ -17,11 +17,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\YamatoDaiwaCS_Extensions.csproj" />
+    <ProjectReference Include="..\..\YamatoDaiwa.CSharpExtensions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   
 </Project>

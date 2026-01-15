@@ -1,0 +1,1 @@
+﻿wsl tree -I 'obj\|bin\|.git\|.idea\|.vs\|Documentation\|docs'

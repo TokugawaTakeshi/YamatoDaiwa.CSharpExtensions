@@ -53,7 +53,7 @@ Contains the regular expression of the valid email address according
 * `SetPairIf`
   * `Dictionary<TKey, TValue> SetPairIf<TKey, TValue>(TKey key, TValue value, bool condition) where TKey : notnull`
   * `Dictionary<TKey, TValue> SetPairIf<TKey, TValue>(TKey key, TValue value, Func<TKey, TValue, bool> condition) where TKey : notnull`
-
+* DeletingOfOnePairByKey.Result<TKey, TValue> DeleteOnePairByKey(TKey key)
 
 ### `List`
 

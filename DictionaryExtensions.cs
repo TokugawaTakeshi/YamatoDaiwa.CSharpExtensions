@@ -7,15 +7,17 @@ public static class Dictionary
   extension<TKey, TValue>(Dictionary<TKey, TValue> self) where TKey : notnull
   {
     
-    /* ━━━ SetPair ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* ━━━ Adding / Updating Of Pairs ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* ┅┅┅ Unconditional ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅ */
+    /* ╍╍╍ One Pair ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍ */
     public Dictionary<TKey, TValue> SetPair(TKey key, TValue value)
     {
       self.Add(key, value);
       return self;
     }
     
-    
-    /* ━━━ SetPairs ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* ╍╍╍ Multiple Pairs ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍ */
     public Dictionary<TKey, TValue> SetPairs(Dictionary<TKey, TValue> pairs)
     {
       
@@ -28,8 +30,9 @@ public static class Dictionary
       
     }
     
-    
-    /* ━━━ SetPairIfValueNotIsNull ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* ┅┅┅ Conditional ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅ */
+    /* ╍╍╍ Non-null Condition ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍ */
     public Dictionary<TKey, TValue> SetPairIfValueIsNotNull(TKey key, TValue? value)
     {
     
@@ -43,7 +46,7 @@ public static class Dictionary
     }
 
     
-    /* ━━━ SetPairIf ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    /* ╍╍╍ Arbitrary Condition ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍ */
     public Dictionary<TKey, TValue> SetPairIf(TKey key, TValue value, bool condition)
     {
 
@@ -67,7 +70,37 @@ public static class Dictionary
       return self;
 
     }
+    
+    
+    /* ━━━ Deleting ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    public DeletingOfOnePairByKey.Result<TKey, TValue> DeleteOnePairByKey(TKey key)
+    {
 
+      self.Remove(key, out TValue? removedValue);
+      
+      return new DeletingOfOnePairByKey.Result<TKey, TValue>(
+        hasBeenFoundAndDeleted: removedValue is not null,
+        removedValue,
+        updatedDictionary: self
+      );
+
+    }
+    
+  }
+  
+  
+  public static class DeletingOfOnePairByKey
+  {
+    public record Result<TKey, TValue>(
+      bool hasBeenFoundAndDeleted,
+      TValue? removedValue,
+      Dictionary<TKey, TValue> updatedDictionary
+    ) where TKey : notnull
+    {
+      public readonly bool hasBeenFoundAndDeleted = hasBeenFoundAndDeleted;
+      public readonly TValue? removedValue = removedValue;
+      public readonly Dictionary<TKey, TValue> updatedDictionary = updatedDictionary;
+    } 
   }
   
 }
