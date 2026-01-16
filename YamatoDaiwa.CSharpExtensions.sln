@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.1.11312.151 d18.0
+VisualStudioVersion = 18.1.11312.151
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamatoDaiwa.CSharpExtensions", "YamatoDaiwa.CSharpExtensions.csproj", "{94D65D8E-645F-4B24-A7CD-FC39581C9FA1}"
 EndProject
@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Russian", "OfficialLocaliza
 	ProjectSection(ProjectDependencies) = postProject
 		{94D65D8E-645F-4B24-A7CD-FC39581C9FA1} = {94D65D8E-645F-4B24-A7CD-FC39581C9FA1}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamatoDaiwa.CSharpExtensions.Tests", "Tests\YamatoDaiwa.CSharpExtensions.Tests.csproj", "{37F81628-8231-4C37-8B91-49F6C0E9FCDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C467623C-0B8F-4CB1-898D-F832288C5B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C467623C-0B8F-4CB1-898D-F832288C5B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C467623C-0B8F-4CB1-898D-F832288C5B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F81628-8231-4C37-8B91-49F6C0E9FCDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F81628-8231-4C37-8B91-49F6C0E9FCDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F81628-8231-4C37-8B91-49F6C0E9FCDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F81628-8231-4C37-8B91-49F6C0E9FCDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
